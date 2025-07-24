@@ -1,0 +1,9 @@
+{
+  "timeout": 10,
+  "concurrent_tests": 50,
+  "min_success_sites": 2,
+  "check_org": true,
+  "output_file": "working_proxies.txt",
+  "failed_file": "failed_proxies.txt",
+  "suspicious_file": "suspicious_proxies.txt"
+}
