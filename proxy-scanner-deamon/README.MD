@@ -1,4 +1,3 @@
----
 
 ````
 # 🌎 Async Internet-Scale Proxy Scanner
@@ -26,6 +25,23 @@ Proxies are only considered **working** if they:
 ---
 
 ## ⚡️ Usage
+# Start 8 instances
+./proxy_manager.sh start 8
+
+# Check status
+./proxy_manager.sh status
+
+# Scale to 12 instances
+./proxy_manager.sh scale 12
+
+# View logs from instance 3
+./proxy_manager.sh logs 3 200
+
+# Stop all instances
+./proxy_manager.sh stop
+
+# Restart with 4 instances
+./proxy_manager.sh restart 4
 
 ### 1. Install dependencies
 
@@ -60,26 +76,7 @@ python3 scanner.py --status
 * **Scans** every public IPv4 (skips reserved ranges automatically)
 * **Tests** each with all common proxy ports
 * **Uses** aiohttp for async/concurrent requests
-* **Tries** to GET both `example.com` and `cheese.com` via each proxy
-* **Rejects** proxies if the response body contains `nginx` or `apache` (case-insensitive)
-* **Saves** working proxies instantly; never duplicates
 
----
-
-## 📝 Example: Check Progress
-
-```
-python3 scanner.py --status
-```
-
-```
-Current IP index: 2700000
-IPs scanned: 270000
-Working proxies: 47
-Time: Mon Jul 21 17:33:00 2025
-```
-
----
 
 ## 🔒 Ethical Use
 
