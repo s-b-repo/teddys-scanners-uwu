@@ -1,0 +1,9 @@
+{
+  "scan_ports": [80, 443, 8080, 3128, 1080, 9050, 9051],
+  "timeout": 5,
+  "concurrent_ips": 2000,
+  "batch_size": 10000,
+  "scan_delay": 0,
+  "connection_limit": 10000,
+  "test_url": "http://httpbin.org/ip"
+}
